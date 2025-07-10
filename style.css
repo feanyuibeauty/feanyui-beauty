@@ -1,46 +1,94 @@
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f3ef;
-  color: #3a2e2e;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(to bottom right, #f2f2f2, #e5e0db);
+  color: #2c2c2c;
+  line-height: 1.6;
+}
+
+header.hero {
   text-align: center;
-  padding: 0;
+  padding: 4em 1em;
+  background: #fff;
 }
 
-header {
-  background-color: #6b4f3b;
-  color: white;
-  padding: 2em 1em;
+header.hero h1 {
+  font-size: 2.2em;
+  margin: 0.2em;
 }
 
-h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.2em;
+header.hero h1 span {
+  color: #b8976b;
+  font-style: italic;
 }
 
-.btn {
-  display: inline-block;
+.subtle {
+  color: #333;
+  margin: 1em 0;
+}
+
+.book-button {
   padding: 0.75em 1.5em;
-  background-color: #d1a679;
-  color: white;
+  background-color: #b8976b;
+  color: #fff;
   border-radius: 10px;
   text-decoration: none;
+  display: inline-block;
   margin-top: 1em;
 }
 
-.btn:hover {
-  background-color: #b97e55;
-}
-
-section {
-  padding: 2em;
-  max-width: 600px;
+.about {
+  text-align: center;
+  padding: 3em 2em;
+  max-width: 800px;
   margin: auto;
 }
 
-footer {
-  margin-top: 3em;
-  background-color: #eee;
+.profile-pic {
+  width: 100px;
+  border-radius: 50%;
+  margin: 1em auto;
+}
+
+.values {
+  text-align: center;
+  padding: 2em;
+}
+
+.values .script {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 1.4em;
+  margin-bottom: 1em;
+}
+
+.value-circles span {
+  display: inline-block;
+  border: 2px solid #b8976b;
+  border-radius: 50%;
   padding: 1em;
+  margin: 0.5em;
+  width: 100px;
+}
+
+.policies {
+  padding: 2em;
+}
+
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1em;
+  padding: 1em 0;
+}
+
+.policy-grid h3 {
+  color: #b8976b;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background: #fff;
   font-size: 0.9em;
 }

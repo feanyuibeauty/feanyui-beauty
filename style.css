@@ -1,76 +1,277 @@
-body {
+/* Reset and global styles */
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f3f0;
-  color: #2d2a26;
-}
-.sidebar {
-  position: fixed;
-  top: 0; left: 0;
-  width: 220px;
-  height: 100%;
-  background-color: #5d4037;
-  color: white;
-  padding: 2em 1em;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-}
-.sidebar .logo {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-bottom: 2em;
-}
-.sidebar ul {
-  list-style: none;
   padding: 0;
+  box-sizing: border-box;
 }
-.sidebar ul li {
-  margin: 1em 0;
+
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: #e3bc96;
+  color: #2c1e14;
+  line-height: 1.6;
+  /*padding-top: 80px; */
 }
-.sidebar ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-.sidebar ul li a.active {
-  color: #a3c1a1;
-}
-.content {
-  margin-left: 240px;
-  padding: 2em;
-}
-.hero h1 {
-  font-size: 2.5em;
-  margin: 0.2em 0;
-}
-.hero h1 span {
-  color: #a3c1a1;
-  font-style: italic;
-}
-.btn {
-  background-color: #a3c1a1;
-  color: white;
-  text-decoration: none;
-  padding: 0.75em 1.5em;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 1.5em;
-}
-.about p, .values p, .policy-grid p {
-  max-width: 800px;
-  margin-bottom: 1.2em;
-}
-.values .circles span {
-  display: inline-block;
-  border: 2px solid #a3c1a1;
-  border-radius: 50%;
-  padding: 0.8em 1em;
-  margin: 0.5em;
+
+/* Top header button override */
+.btn-schedule.top-btn {
+  margin-left: 30px;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  background-color: #6c7a4c;
+  border-radius: 4px;
   font-weight: bold;
-  color: #5d4037;
+  text-transform: uppercase;
+  color: white;
 }
-.policy-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2em;
-  margin-top: 1em;
+
+.btn-schedule.top-btn:hover {
+  background-color: #5e4c42;
+}
+
+/* Header */
+.top-header {
+  margin-top: 0;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #dfe6d1;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #6b4a2d;
+  letter-spacing: 1px;
+}
+
+.top-nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #5e4c42;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.top-nav a:hover {
+  color: #a6855e;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  height: 100vh;
+  max-height: 700px;
+  background-color: #fdfbf9;
+  overflow: hidden;
+}
+
+.hero-left {
+  flex: 1;
+  background-color: #d6dbb4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.hero-left img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+}
+
+.hero-right {
+  flex: 1;
+  background-color: #fdfbf9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.hero-right h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #5e4c42;
+}
+
+.hero-right p {
+  font-size: 1.2rem;
+  max-width: 540px;
+  margin-bottom: 25px;
+  color: #5b4636;
+}
+
+/* Slogan image — optional
+.hero-right img.slogan {
+  max-width: 400px;
+  margin-bottom: 30px;
+}
+*/
+
+.btn-schedule {
+  background-color: #6c7a4c;
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.btn-schedule:hover {
+  background-color: #5e4c42;
+}
+
+/* Decorative brown line above hero section (overlayed above green) */
+.section-divider {
+  border-bottom: 30px solid #a98467; /* softened elegant brown */
+  margin: 0 auto;
+  width: auto;
+  position: relative;
+  z-index: 0; /* make sure it stays below header */
+}
+
+.mission-section {
+  text-align: center;
+  padding: 80px 20px 60px;
+  background-color: #fdfbf9;
+}
+
+.mission-section h2 {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  color: #5e4c42;
+  margin-bottom: 20px;
+}
+
+.mission-section p {
+  font-size: 1.18rem;
+  color: #3e2c1f;
+  max-width: 1000px;
+  margin: 0 auto 50px;
+  line-height: 1.8;
+}
+
+.mission-section a {
+  font-weight: bold;
+  /*color: #000;*/
+  font-size: 1.2rem;
+  text-decoration: underline;
+  text-underline-offset: 3px; /* pushes underline a little lower */
+  background: none;
+  padding: 0;
+  border: none;
+  text-transform: none;
+  font-family: 'Playfair Display', serif;
+  transition: color 0.3s ease;
+}
+
+.mission-section a:hover {
+  color: #6c7a4c; /* subtle green hover effect */
+}
+
+
+.gallery {
+  padding: 60px 20px;
+  background-color: #fdfbf9;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
+  color: #5e4c42;
+  margin-bottom: 30px;
+}
+
+.glider-contain {
+  position: relative;
+  margin: 0 auto;
+  max-width: 95%;
+}
+
+.glider {
+  display: flex;
+  align-items: center;
+}
+
+.glider img,
+.glider video {
+  width: 100%;
+  height: auto;
+  max-width: 220px;  /* caps individual item size */
+  margin: 0 8px;
+  border-radius: 6px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+
+.glider img:hover {
+  transform: scale(1.03);
+}
+
+.glider video {
+  cursor: default; /* so it doesn't conflict with play controls */
+}
+
+.glider-prev,
+.glider-next {
+  background-color: #B4C7A3; /* Sage green */
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 12px 18px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.glider-prev:hover,
+.glider-next:hover {
+  background-color: #A2B894;
+}
+
+.glider-prev { left: -30px; }
+.glider-next { right: -30px; }
+
+.view-all-btn {
+  margin-top: 25px;
+  padding: 10px 24px;
+  background-color: #5e4c42;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #4a3a32;
 }
